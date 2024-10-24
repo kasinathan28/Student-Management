@@ -1,0 +1,38 @@
+.home-page {
+    display: flex;
+    flex-direction: column; // Stack user details and contents vertically
+    align-items: center; // Center items horizontally
+
+    padding: 20px; // Inner padding
+
+    .user-details {
+        margin-bottom: 20px; // Spacing below user details
+        text-align: center; // Center align user details
+
+        h2 {
+            margin: 5px 0; // Margin for heading
+        }
+    }
+
+    .contents {
+        display: flex; // Arrange cards in a row
+        justify-content: center; // Center cards horizontally
+        gap: 20px; // Spacing between cards
+        flex-wrap: wrap;
+
+        .card {
+            background: white; // Card background color
+            border-radius: 8px; // Rounded corners
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Soft shadow
+            padding: 30px 20px; // Inner padding
+            width: 200px;
+            text-align: center; // Center text
+            transition: 0.2s ease all;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

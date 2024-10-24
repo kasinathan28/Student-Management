@@ -1,0 +1,24 @@
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+}
+
+:root {
+    --bg-color: #ccc;
+    --primary-color: #333a57;
+    --secondary-color: #4d869b;
+    --text-color: #ffff;
+    --error-color: #bd0927;
+    --success-color: #9ae8b7;
+}
+
+.error {
+    color: var(--error-color);
+}

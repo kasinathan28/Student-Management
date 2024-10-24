@@ -1,0 +1,41 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background: var(--primary-color);
+
+        h1 {
+            font-size: 24px;
+            color: var(--text-color);
+        }
+
+        .header-left {
+            gap: 16px;
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .header-right {
+            display: flex;
+
+            .log-out {
+                color: var(--text-color);
+                background: var(--error-color);
+                border-radius: 10px;
+                border: none;
+                padding: 10px;
+                transition: 0.2s ease all;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

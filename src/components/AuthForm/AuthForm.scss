@@ -1,0 +1,98 @@
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    gap: 10px;
+
+    select {
+        width: 100%; // Full width
+        padding: 10px; // Padding for better spacing
+        border: 1px solid #ccc; // Border color
+        border-radius: 4px; // Rounded corners
+        font-size: 16px; // Font size
+        background-color: #f9f9f9; // Background color
+        transition: border-color 0.3s; // Transition effect for border color
+
+        // Focus state
+        &:focus {
+            border-color: #66a8cf; // Change border color on focus
+            outline: none; // Remove default outline
+            background-color: #fff; // Change background color on focus
+        }
+
+        // Disabled state
+        &:disabled {
+            background-color: #e9ecef; // Lighter background for disabled
+            color: #6c757d; // Text color for disabled
+            cursor: not-allowed; // Change cursor for disabled
+        }
+
+        // Styling for the options
+        option {
+            padding: 10px; // Padding for options
+            font-size: 16px; // Font size for options
+        }
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        width: 95%;
+        max-width: 100%;
+        outline: none;
+        transition: border-color 0.3s ease-in-out;
+
+        &:focus {
+            border-color: #66a8cf;
+        }
+    }
+
+    button {
+        padding: 12px;
+        width: 100%;
+        background-color: #66a8cf;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #26425a;
+        }
+    }
+
+    p {
+        font-size: 14px;
+
+        button {
+            padding: 5px;
+            transition: 0.2s ease all;
+            background: none;
+            color: var(--primary-color);
+
+            &:hover {
+                background: none;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
