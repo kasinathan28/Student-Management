@@ -7,7 +7,7 @@ export const useValidateUser = () => {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("isUserLoggedIn"));
     if (user) {
-      navigate("/home");
+      navigate(`/home/${user.userId}/${user.branch}`);
     } else {
       navigate("/");
     }

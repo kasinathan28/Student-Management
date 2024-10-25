@@ -38,7 +38,6 @@ function AuthForm({ isLogin, onSwitch }) {
 
     if (isLogin) {
       const authResult = authenticateUser(email, password, branch);
-      console.log(authResult);
       if (authResult.success) {
         const userId = authResult.user.id;
         navigate(`/home/${userId}/${branch}`);
@@ -47,7 +46,6 @@ function AuthForm({ isLogin, onSwitch }) {
       }
     } else {
       saveUserToLocalStorage(email, password, branch);
-      console.log("Signed up successfully");
       const userId = `user_${new Date().getTime()}`;
       navigate(`/home/${userId}/${branch}`);
     }
@@ -85,7 +83,6 @@ function AuthForm({ isLogin, onSwitch }) {
           }}
           required
         />
-        {/* Dropdown for selecting branch */}
         <select
           value={branch}
           onChange={(e) => {

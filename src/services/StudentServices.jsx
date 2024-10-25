@@ -17,47 +17,50 @@ const addStudent = (student) => {
 
 const listStudents = (branch) => {
   const students = getStoredStudents();
-  // Filter students by branch if provided
+
   return branch
     ? students.filter((student) => student.branch === branch)
     : students;
 };
 
-// Function to remove a student by ID
 const removeStudent = (id) => {
-  let students = getStoredStudents(); // Fetch students from storage
+  let students = getStoredStudents();
   students = students.filter((student) => student.id !== id);
-  saveStudents(students); // Save updated list back to localStorage
+  saveStudents(students);
 };
 
-// Function to update a student's details
-const updateStudent = (updatedStudent) => {
-  let students = getStoredStudents(); // Fetch students from storage
+const updateStudent = (studentId, updatedStudentData) => {
+  // Retrieve the stored students from local storage or another source
+  let students = getStoredStudents();
+
+  // Map through students and update the one with the matching studentId
   students = students.map((student) =>
-    student.id === updatedStudent.id
-      ? { ...student, ...updatedStudent }
+    student.id === studentId
+      ? { ...student, ...updatedStudentData } // Update the student with the new data
       : student
   );
-  saveStudents(students); // Save updated list back to localStorage
+
+  // Save the updated students back to storage
+  saveStudents(students);
 };
 
-
-// Function to fetch the fees status of a student by ID
 const fetchFeesStatus = (studentId) => {
   const students = getStoredStudents(); // Fetch students from storage
-  const student = students.find((student) => student.id === studentId);
+  const student = students.find((student) => student.id === studentId); // Find the student by ID
 
-  if (student && student.feesStatus) {
-    return student.feesStatus; // Assuming feesStatus is an array of monthly fee statuses
+  if (student) {
+    // If the student is found, return their fees
+    return Array.isArray(student.fees) ? student.fees : []; // Ensure fees is an array, return empty array if not
   }
 
-  return []; // Return an empty array if no fees status found
+  return []; // Return an empty array if the student is not found
 };
 
 export default {
   addStudent,
+  getStoredStudents,
   listStudents,
   removeStudent,
-  updateStudent, // Export the update function
-  fetchFeesStatus, // Export the fees fetching function
+  updateStudent,
+  fetchFeesStatus,
 };

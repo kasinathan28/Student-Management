@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1729872736487,
+    "name": "kasinathan",
+    "class": "4",
+    "contactNumber": "1278318723123",
+    "parentName": "asdasd",
+    "parentContactNumber": "13123123",
+    "fees": 7000,
+    "isPaid": false,
+    "branch": "Kumarapuram"
+  },
+  {
+    "id": 1729875628443,
+    "name": "kasinathan",
+    "contactNumber": "1278318723123",
+    "branch": "Karuvatta",
+    "class": "2",
+    "parentName": "asdasd",
+    "parentContactNumber": "13123123",
+    "fees": 5000,
+    "isPaid": true
+  },
+  {
+    "id": 1729876084036,
+    "name": "Maidhily",
+    "contactNumber": "10230192",
+    "branch": "Karuvatta",
+    "class": "5",
+    "isPaid": true,
+    "parentName": "asdas",
+    "parentContactNumber": "13123123",
+    "fees": 8000
+  },
+  {
+    "id": 1729877816291,
+    "name": "maya",
+    "contactNumber": "",
+    "branch": "Karuvatta",
+    "class": "5",
+    "isPaid": false,
+    "parentName": "asd",
+    "parentContactNumber": "123123",
+    "fees": 8000
+  },
+  {
+    "id": 1729878095242,
+    "name": "demo",
+    "contactNumber": "",
+    "branch": "Karuvatta",
+    "class": "7",
+    "parentName": "asdas",
+    "parentContactNumber": "123123",
+    "fees": 10000,
+    "isPaid": false
+  },
+  {
+    "id": 1729879958091,
+    "name": "kasinathan",
+    "contactNumber": "",
+    "branch": "Karuvatta",
+    "class": "5",
+    "parentName": "asdas",
+    "parentContactNumber": "13123123",
+    "fees": 8000,
+    "isPaid": false
+  },
+  {
+    "id": 1729879991616,
+    "name": "Maidhily",
+    "contactNumber": "",
+    "branch": "Karuvatta",
+    "class": "4",
+    "parentName": "asd",
+    "parentContactNumber": "asd",
+    "fees": 7000,
+    "isPaid": false
+  },
+  {
+    "id": 1729881309220,
+    "name": "Fees Structure",
+    "contactNumber": "",
+    "branch": "Karuvatta",
+    "class": "2",
+    "parentName": "asdas",
+    "parentContactNumber": "13123123",
+    "fees": [
+      { "month": "January", "isPaid": true },
+      { "month": "February", "isPaid": true },
+      { "month": "March", "isPaid": false },
+      { "month": "April", "isPaid": false },
+      { "month": "May", "isPaid": false },
+      { "month": "June", "isPaid": false },
+      { "month": "July", "isPaid": false },
+      { "month": "August", "isPaid": false },
+      { "month": "September", "isPaid": false },
+      { "month": "October", "isPaid": false },
+      { "month": "November", "isPaid": false },
+      { "month": "December", "isPaid": false }
+    ]
+  }
+]
